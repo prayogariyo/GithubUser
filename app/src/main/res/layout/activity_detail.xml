@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="ui.DetailActivity">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/favoriteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/follow"
+            android:src="@drawable/baseline_favorite_border_24" />
+
+        <!-- Foto Avatar -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/tvUserLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
+            tools:text="Username" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@id/tv_angka_following"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/angka_1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_angka_following"
+            app:layout_constraintStart_toEndOf="@+id/tv_angka_following"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_angka_following" />
+
+        <TextView
+            android:id="@+id/tv_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/tv_following"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_following"
+            app:layout_constraintStart_toEndOf="@+id/tv_following"
+            app:layout_constraintTop_toTopOf="@+id/tv_following" />
+
+        <TextView
+            android:id="@+id/tv_angka_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-45dp"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/angka_2"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_angka_followers"
+            app:layout_constraintStart_toEndOf="@+id/tv_angka_followers"
+            app:layout_constraintTop_toTopOf="@+id/tv_angka_followers" />
+
+        <TextView
+            android:id="@+id/tv_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/tv_followers"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_followers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_followers"
+            app:layout_constraintTop_toTopOf="@+id/tv_followers" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:tabIndicatorColor="?attr/tabIndicatorColor"
+            app:tabSelectedTextColor="?attr/tabSelectedTextColor"
+            app:tabTextColor="?attr/tabTextColor"
+            android:background="?attr/background"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>
+
+
